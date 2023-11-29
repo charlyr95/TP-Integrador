@@ -24,18 +24,16 @@ public class Especialidad implements Serializable{
 		
 	@Column(name="nombre")
 	private String nombre;
-
+	
+	// Constructores
 	public Especialidad() {
 	}
 	
-	
-
 	public Especialidad(String nombre) {
 		this.nombre = nombre;
 	}
 
-
-
+	// Getters y Setters
 	public int getId() {
 		return id;
 	}
@@ -52,12 +50,10 @@ public class Especialidad implements Serializable{
 		this.nombre = nombre;
 	}
 
+	// ToString
 	@Override
 	public String toString() {
 		return "Especialidad [id=" + id + ", nombre=" + nombre + "]";
 	}
-	
-	
-	
-	
+
 }

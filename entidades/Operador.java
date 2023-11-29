@@ -14,7 +14,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Operadores")
+@Table(name="Operadores")
 public class Operador implements Serializable {
 
 	@Id
@@ -37,8 +37,9 @@ public class Operador implements Serializable {
 	@Column(name = "sueldo")
 	private double sueldo;
 
-//Constructor vacio
+	// Constructores
 	public Operador() {
+		
 	}
 
 	public Operador(String nombre, String apellido, String documento, String email, double sueldo) {
@@ -48,7 +49,8 @@ public class Operador implements Serializable {
 		this.email = email;
 		this.sueldo = sueldo;
 	}
-
+	
+	// Getters y Setters
 	public int getId() {
 		return id;
 	}
@@ -97,6 +99,7 @@ public class Operador implements Serializable {
 		this.sueldo = sueldo;
 	}
 
+	// ToString
 	@Override
 	public String toString() {
 		return "Operador [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", documento=" + documento

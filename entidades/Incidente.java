@@ -54,16 +54,13 @@ public class Incidente implements Serializable{
 	@Temporal(TemporalType.DATE)
 	private Date fechaEnQueFueResuelta;
 		
-	//Constructor vacio
-	public Incidente()
-	{
+	// Constructores
+	public Incidente(){
+		
 	}
 
-
-	
-
 	public Incidente(Operador operador, Cliente cliente, Especialidad especialidad, String descripcion,
-			Date fechaDeReporte, Date fechaDeResolucionEstimada, Date fechaEnQueFueResuelta) {
+					 Date fechaDeReporte, Date fechaDeResolucionEstimada, Date fechaEnQueFueResuelta) {
 		this.operador = operador;
 		this.cliente = cliente;
 		this.especialidad = especialidad;
@@ -73,106 +70,72 @@ public class Incidente implements Serializable{
 		this.fechaEnQueFueResuelta = fechaEnQueFueResuelta;
 	}
 
-
-
-
+	// Getters y Setters
 	public int getId() {
 		return id;
 	}
-
-
 
 	public void setId(int id) {
 		this.id = id;
 	}
 
-
-
 	public Operador getOperador() {
 		return operador;
 	}
-
-
 
 	public void setOperador(Operador operador) {
 		this.operador = operador;
 	}
 
-
-
 	public Cliente getCliente() {
 		return cliente;
 	}
-
-
 
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
 
-
-
 	public Especialidad getEspecialidad() {
 		return especialidad;
 	}
-
-
 
 	public void setEspecialidad(Especialidad especialidad) {
 		this.especialidad = especialidad;
 	}
 
-
-
 	public String getDescripcion() {
 		return descripcion;
 	}
-
-
 
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
 
-
-
 	public Date getFechaDeReporte() {
 		return fechaDeReporte;
 	}
-
-
 
 	public void setFechaDeReporte(Date fechaDeReporte) {
 		this.fechaDeReporte = fechaDeReporte;
 	}
 
-
-
 	public Date getFechaDeResolucionEstimada() {
 		return fechaDeResolucionEstimada;
 	}
-
-
 
 	public void setFechaDeResolucionEstimada(Date fechaDeResolucionEstimada) {
 		this.fechaDeResolucionEstimada = fechaDeResolucionEstimada;
 	}
 
-
-
-
 	public Date getFechaEnQueFueResuelta() {
 		return fechaEnQueFueResuelta;
 	}
-
-
 
 	public void setFechaEnQueFueResuelta(Date fechaEnQueFueResuelta) {
 		this.fechaEnQueFueResuelta = fechaEnQueFueResuelta;
 	}
 
-
-
+	// ToString
 	@Override
 	public String toString() {
 		return "Incidente [id=" + id + ", operador=" + operador + ", cliente=" + cliente + ", especialidad="
@@ -181,9 +144,4 @@ public class Incidente implements Serializable{
 				+ fechaEnQueFueResuelta + "]";
 	}
 
-
-
-
-
-	
 }

@@ -22,7 +22,6 @@ public class Cliente implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 		
-	
 	@Column(name = "razon_social")
 	private String razonSocial;
 	
@@ -41,13 +40,10 @@ public class Cliente implements Serializable{
 	@Column(name = "domicilio")
 	private String domicilio;
 		
-	//Constructor vacio
-	public Cliente()
-	{
+	// Constructores
+	public Cliente(){
+	
 	}
-
-
-
 
 	public Cliente(String razonSocial, String cuit, String telefono, String email, String dni, String domicilio) {
 		this.razonSocial = razonSocial;
@@ -57,11 +53,8 @@ public class Cliente implements Serializable{
 		this.dni = dni;
 		this.domicilio = domicilio;
 	}
-
-
-
-
-
+	
+	// Getters
 	public int getId() {
 		return id;
 	}
@@ -86,81 +79,43 @@ public class Cliente implements Serializable{
 		this.telefono = telefono;
 	}
 
-
 	public String getEmail() {
 		return email;
 	}
-
-
-
 
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
-
-
-
 	public String getDni() {
 		return dni;
 	}
-
-
-
 
 	public void setDni(String dni) {
 		this.dni = dni;
 	}
 
-
-
-
 	public String getDomicilio() {
 		return domicilio;
 	}
 
-
-
-
 	public void setDomicilio(String domicilio) {
 		this.domicilio = domicilio;
 	}
-	
-	
-
-
-
 
 	public String getCuit() {
 		return cuit;
 	}
 
-
-
-
 	public void setCuit(String cuit) {
 		this.cuit = cuit;
 	}
-
-
-
-
+	
+	// ToString
 	@Override
 	public String toString() {
 		return "Cliente [id=" + id + ", razonSocial=" + razonSocial + ", cuit=" + cuit + ", telefono=" + telefono
 				+ ", email=" + email + ", dni=" + dni + ", domicilio=" + domicilio + "]";
 	}
-
-
-
-	
-	
-	
-	
-	
-
-	
-	
-	
 	
 }

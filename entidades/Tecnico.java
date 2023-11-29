@@ -49,16 +49,14 @@ public class Tecnico implements Serializable{
 	@ManyToMany(cascade = {CascadeType.ALL})
 	@JoinTable(name="tecnicos_x_incidentes",joinColumns= {@JoinColumn(name="id_tecnico")}, inverseJoinColumns= {@JoinColumn(name="id_incidente")})
 	private Set<Incidente> listaIncidentes = new HashSet<Incidente>(); 
-	
 		
-	//Constructor vacio
-	public Tecnico()
-	{
+	// Constructores
+	public Tecnico(){
+		
 	}
-	
 
 	public Tecnico(String nombre, String apellido, String documento, String email, double sueldo,
-			Especialidad especialidad, Set<Incidente> listaIncidentes) {
+				   Especialidad especialidad, Set<Incidente> listaIncidentes) {
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.documento = documento;
@@ -68,87 +66,72 @@ public class Tecnico implements Serializable{
 		this.listaIncidentes = listaIncidentes;
 	}
 
-
+	// Getters y Setters
 	public int getId() {
 		return id;
 	}
-
 
 	public void setId(int id) {
 		this.id = id;
 	}
 
-
 	public String getNombre() {
 		return nombre;
 	}
-
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
-
 	public String getApellido() {
 		return apellido;
 	}
-
 
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
 
-
 	public String getDocumento() {
 		return documento;
 	}
-
 
 	public void setDocumento(String documento) {
 		this.documento = documento;
 	}
 
-
 	public String getEmail() {
 		return email;
 	}
-
 
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
-
 	public double getSueldo() {
 		return sueldo;
 	}
-
 
 	public void setSueldo(double sueldo) {
 		this.sueldo = sueldo;
 	}
 
-
 	public Especialidad getEspecialidad() {
 		return especialidad;
 	}
-
 
 	public void setEspecialidad(Especialidad especialidad) {
 		this.especialidad = especialidad;
 	}
 
-
 	public Set<Incidente> getListaIncidentes() {
 		return listaIncidentes;
 	}
-
 
 	public void setListaIncidentes(Set<Incidente> listaIncidentes) {
 		this.listaIncidentes = listaIncidentes;
 	}
 
-
+	// ToString
 	@Override
 	public String toString() {
 		return "Tecnico [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", documento=" + documento
@@ -156,10 +139,4 @@ public class Tecnico implements Serializable{
 				+ listaIncidentes + "]";
 	}
 
-
-	
-	
-
-
-	
 }
