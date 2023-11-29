@@ -31,17 +31,34 @@ public class Cliente implements Serializable{
 
 	@Column(name = "telefono")
 	private String telefono;
+	
+	@Column(name = "email")
+	private String email;
+	
+	@Column(name = "dni")
+	private String dni;
+	
+	@Column(name = "domicilio")
+	private String domicilio;
 		
 	//Constructor vacio
 	public Cliente()
 	{
 	}
 
-	public Cliente(String razonSocial, String cUIT, String telefono) {
+
+
+
+	public Cliente(String razonSocial, String cUIT, String telefono, String email, String dni, String domicilio) {
 		this.razonSocial = razonSocial;
 		CUIT = cUIT;
 		this.telefono = telefono;
+		this.email = email;
+		this.dni = dni;
+		this.domicilio = domicilio;
 	}
+
+
 
 
 
@@ -77,10 +94,60 @@ public class Cliente implements Serializable{
 		this.telefono = telefono;
 	}
 
+
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+
+
+	public String getDni() {
+		return dni;
+	}
+
+
+
+
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+
+
+
+
+	public String getDomicilio() {
+		return domicilio;
+	}
+
+
+
+
+	public void setDomicilio(String domicilio) {
+		this.domicilio = domicilio;
+	}
+
+
+
+
 	@Override
 	public String toString() {
-		return "Cliente [id=" + id + ", razonSocial=" + razonSocial + ", CUIT=" + CUIT + ", telefono=" + telefono + "]";
+		return "Cliente [id=" + id + ", razonSocial=" + razonSocial + ", CUIT=" + CUIT + ", telefono=" + telefono
+				+ ", email=" + email + ", dni=" + dni + ", domicilio=" + domicilio + "]";
 	}
+	
+	
+	
+	
 	
 	
 

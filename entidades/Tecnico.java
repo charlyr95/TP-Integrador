@@ -41,6 +41,7 @@ public class Tecnico implements Serializable{
 	@Column(name = "sueldo")
 	private double sueldo;
 	
+	
 	@ManyToOne(cascade= {CascadeType.ALL})
 	@JoinColumn(name="fk_especialidad")
 	private Especialidad especialidad;
