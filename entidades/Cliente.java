@@ -26,8 +26,8 @@ public class Cliente implements Serializable{
 	@Column(name = "razon_social")
 	private String razonSocial;
 	
-	@Column(name = "CUIT")
-	private String CUIT;
+	@Column(name = "cuit")
+	private String cuit;
 
 	@Column(name = "telefono")
 	private String telefono;
@@ -49,9 +49,9 @@ public class Cliente implements Serializable{
 
 
 
-	public Cliente(String razonSocial, String cUIT, String telefono, String email, String dni, String domicilio) {
+	public Cliente(String razonSocial, String cuit, String telefono, String email, String dni, String domicilio) {
 		this.razonSocial = razonSocial;
-		CUIT = cUIT;
+		this.cuit = cuit;
 		this.telefono = telefono;
 		this.email = email;
 		this.dni = dni;
@@ -78,14 +78,6 @@ public class Cliente implements Serializable{
 		this.razonSocial = razonSocial;
 	}
 
-	public String getCUIT() {
-		return CUIT;
-	}
-
-	public void setCUIT(String cUIT) {
-		CUIT = cUIT;
-	}
-
 	public String getTelefono() {
 		return telefono;
 	}
@@ -93,8 +85,6 @@ public class Cliente implements Serializable{
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
-
-
 
 
 	public String getEmail() {
@@ -135,16 +125,34 @@ public class Cliente implements Serializable{
 	public void setDomicilio(String domicilio) {
 		this.domicilio = domicilio;
 	}
+	
+	
+
+
+
+
+	public String getCuit() {
+		return cuit;
+	}
+
+
+
+
+	public void setCuit(String cuit) {
+		this.cuit = cuit;
+	}
 
 
 
 
 	@Override
 	public String toString() {
-		return "Cliente [id=" + id + ", razonSocial=" + razonSocial + ", CUIT=" + CUIT + ", telefono=" + telefono
+		return "Cliente [id=" + id + ", razonSocial=" + razonSocial + ", cuit=" + cuit + ", telefono=" + telefono
 				+ ", email=" + email + ", dni=" + dni + ", domicilio=" + domicilio + "]";
 	}
-	
+
+
+
 	
 	
 	
