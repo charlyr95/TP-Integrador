@@ -67,11 +67,11 @@ public class Main {
 		Especialidad especialidad5 = new Especialidad("Especialidad5");		
 		
 		
-		Cliente cliente1 = new Cliente("Razon social 1", "10101010101", "1111111");
-		Cliente cliente2 = new Cliente("Razon social 2", "20202020202", "2222222");
-		Cliente cliente3 = new Cliente("Razon social 3", "30303030303", "3333333");
-		Cliente cliente4 = new Cliente("Razon social 4", "40404040404", "4444444");
-		Cliente cliente5 = new Cliente("Razon social 5", "50505050505", "5555555");
+		Cliente cliente1 = new Cliente("Razon social 1", "10101010101", "1111111", "email-1@example.com", "24765918");
+		Cliente cliente2 = new Cliente("Razon social 2", "20202020202", "2222222", "email-2@example.com", "31876091");
+		Cliente cliente3 = new Cliente("Razon social 3", "30303030303", "3333333", "email-3@example.com", "11837197");
+		Cliente cliente4 = new Cliente("Razon social 4", "40404040404", "4444444", "email-4@example.com", "39171631");
+		Cliente cliente5 = new Cliente("Razon social 5", "50505050505", "5555555", "email-5@example.com", "27176625");
 
 		
 		Incidente incidente1 = new Incidente (operador1, cliente1, especialidad1, "Descripcion1", Date.from(LocalDate.of(2023, 1, 1).atStartOfDay(ZoneId.of("America/Argentina/Buenos_Aires")).toInstant()), Date.from(LocalDate.of(2024, 1, 1).atStartOfDay(ZoneId.of("America/Argentina/Buenos_Aires")).toInstant()), Date.from(LocalDate.of(2023, 11, 25).atStartOfDay(ZoneId.of("America/Argentina/Buenos_Aires")).toInstant()));
