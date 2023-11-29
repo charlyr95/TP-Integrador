@@ -41,7 +41,7 @@ public class Tecnico implements Serializable{
 	@Column(name = "sueldo")
 	private double sueldo;
 	
-	@ManyToOne(cascade= {CascadeType.ALL})
+	@OneToOne(cascade= {CascadeType.ALL})
 	@JoinColumn(name="fk_especialidad")
 	private Especialidad especialidad;
 	
@@ -154,6 +154,11 @@ public class Tecnico implements Serializable{
 				+ ", email=" + email + ", sueldo=" + sueldo + ", especialidad=" + especialidad + ", listaIncidentes="
 				+ listaIncidentes + "]";
 	}
+
+
+	
+	
+
 
 	
 }

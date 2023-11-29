@@ -28,9 +28,13 @@ public class Especialidad implements Serializable{
 	public Especialidad() {
 	}
 	
+	
+
 	public Especialidad(String nombre) {
 		this.nombre = nombre;
 	}
+
+
 
 	public int getId() {
 		return id;
@@ -52,6 +56,8 @@ public class Especialidad implements Serializable{
 	public String toString() {
 		return "Especialidad [id=" + id + ", nombre=" + nombre + "]";
 	}
+	
+	
 	
 	
 }

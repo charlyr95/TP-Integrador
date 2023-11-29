@@ -59,6 +59,9 @@ public class Incidente implements Serializable{
 	{
 	}
 
+
+	
+
 	public Incidente(Operador operador, Cliente cliente, Especialidad especialidad, String descripcion,
 			Date fechaDeReporte, Date fechaDeResolucionEstimada, Date fechaEnQueFueResuelta) {
 		this.operador = operador;
@@ -69,6 +72,9 @@ public class Incidente implements Serializable{
 		this.fechaDeResolucionEstimada = fechaDeResolucionEstimada;
 		this.fechaEnQueFueResuelta = fechaEnQueFueResuelta;
 	}
+
+
+
 
 	public int getId() {
 		return id;
